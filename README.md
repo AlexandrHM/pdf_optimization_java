@@ -1,5 +1,6 @@
-##  Retos de la ruta de JavaScript![Java-banner](https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/4998ae99-cfd0-4556-901f-2448629d677e)
+![Java-banner](https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/4998ae99-cfd0-4556-901f-2448629d677e)
 
+##  Proyecto Monolitico PDF
 #### Descripción
 <p>
 </p>
