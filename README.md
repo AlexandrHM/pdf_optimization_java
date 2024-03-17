@@ -22,7 +22,11 @@ git clone https://github.com/OyasumiiAlex/pdf_optimization_java.git
 ```
 - <p>Abre el proyecto en tu Entorno de Desarrollo Integrado (IDE) preferido, como IntelliJ IDEA, Eclipse o NetBeans.</p>
 
-> [!NOTE]
-> Aqui se encuentran capturas sobre cada plantilla.
 
-## Listado de desafíos de DevChallenges
+> [!NOTE]
+> Aqui se encuentran capturas del proyecto.
+
+## Mockup general
+
+## Resultado
+
