@@ -27,6 +27,7 @@ git clone https://github.com/OyasumiiAlex/pdf_optimization_java.git
 > Aqui se encuentran capturas del proyecto.
 
 ## Mockup general
+<img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/eddacb80-aa0d-4908-bb3a-c1548305e3f2">
 
 ## Resultado
 
