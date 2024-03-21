@@ -29,6 +29,14 @@ git clone https://github.com/OyasumiiAlex/pdf_optimization_java.git
 ## Mockup general
 <img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/c600737b-481c-43f3-bc45-0b2e755b0bfe">
 <img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/b9ff6721-3696-4351-90dd-1d702c270b75">
+<img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/52c4ef61-b134-4181-9ac1-08e58732b508">
+<img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/56732b9a-decd-41de-83c6-173ae0bfed50">
+<img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/16abd24f-b046-452c-877b-76699a3f054a">
+<img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/1efe2d52-e0d8-4b5a-8354-e233d227d47b">
+<img width="450" alt="HomeMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/4ac6e996-ff22-45fe-a302-d492ceaee3e8">
+
+
+
 
 
 
