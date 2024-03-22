@@ -36,6 +36,8 @@ git clone https://github.com/OyasumiiAlex/pdf_optimization_java.git
 <img width="300" alt="Carta3Mockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/4ac6e996-ff22-45fe-a302-d492ceaee3e8">
 <img width="300" alt="PerfilMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/9ecdf346-7e2d-41fc-a42d-15396c2d8b5c">
 <img width="300" alt="LoginMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/c4ee3f38-1bc1-47e3-bfbb-278ecd26a660">
+<img width="300" alt="LoginMockup" src="https://github.com/OyasumiiAlex/pdf_optimization_java/assets/44487342/e34606ee-b232-4095-a009-5461b32c4371">
+
 
 
 
