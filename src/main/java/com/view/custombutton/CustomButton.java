@@ -65,7 +65,7 @@ public class CustomButton extends JButton{
        setColor(Color.WHITE);
        colorOver = new Color(64,100,216);
        colorClick = new Color(228,91,105);
-       borderColor = new Color(228,91,105);
+       borderColor = new Color(80,187,223);
        setContentAreaFilled(false);
        
        //Add event mouse

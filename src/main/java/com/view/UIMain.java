@@ -28,14 +28,15 @@ public class UIMain extends javax.swing.JFrame {
 
         background = new javax.swing.JPanel();
         kGradientPanel1 = new keeptoo.KGradientPanel();
-        customButton2 = new com.view.custombutton.CustomButton();
-        customButton1 = new com.view.custombutton.CustomButton();
-        customButton3 = new com.view.custombutton.CustomButton();
-        customButton4 = new com.view.custombutton.CustomButton();
+        homeButton = new com.view.custombutton.CustomButton();
+        pdfButton = new com.view.custombutton.CustomButton();
+        employeButton = new com.view.custombutton.CustomButton();
+        newPdfButton = new com.view.custombutton.CustomButton();
         jLabel2 = new javax.swing.JLabel();
-        customButton6 = new com.view.custombutton.CustomButton();
+        profileButton = new com.view.custombutton.CustomButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        customButton1 = new com.view.custombutton.CustomButton();
         kGradientPanel2 = new keeptoo.KGradientPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,60 +55,90 @@ public class UIMain extends javax.swing.JFrame {
         kGradientPanel1.setkStartColor(new java.awt.Color(80, 187, 223));
         kGradientPanel1.setPreferredSize(new java.awt.Dimension(200, 760));
 
-        customButton2.setBackground(new java.awt.Color(228, 91, 105));
-        customButton2.setForeground(new java.awt.Color(51, 51, 51));
-        customButton2.setText("Home");
-        customButton2.setColor(new java.awt.Color(228, 91, 105));
-        customButton2.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
-        customButton2.setRadius(10);
-        customButton2.addActionListener(new java.awt.event.ActionListener() {
+        homeButton.setForeground(new java.awt.Color(51, 51, 51));
+        homeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/home_png_16px.png"))); // NOI18N
+        homeButton.setText("Home");
+        homeButton.setBorderColor(new java.awt.Color(80, 187, 223));
+        homeButton.setColor(new java.awt.Color(80, 187, 223));
+        homeButton.setColorClick(new java.awt.Color(0, 156, 210));
+        homeButton.setColorOver(new java.awt.Color(228, 91, 105));
+        homeButton.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
+        homeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        homeButton.setIconTextGap(25);
+        homeButton.setMargin(new java.awt.Insets(2, 18, 3, 14));
+        homeButton.setRadius(10);
+        homeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customButton2ActionPerformed(evt);
+                homeButtonActionPerformed(evt);
             }
         });
 
-        customButton1.setBackground(new java.awt.Color(228, 91, 105));
-        customButton1.setForeground(new java.awt.Color(51, 51, 51));
-        customButton1.setText("Reportes");
-        customButton1.setColor(new java.awt.Color(228, 91, 105));
-        customButton1.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
-        customButton1.setRadius(10);
-        customButton1.addActionListener(new java.awt.event.ActionListener() {
+        pdfButton.setForeground(new java.awt.Color(51, 51, 51));
+        pdfButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/docs_png_16px.png"))); // NOI18N
+        pdfButton.setText("Reportes");
+        pdfButton.setBorderColor(new java.awt.Color(80, 187, 223));
+        pdfButton.setColor(new java.awt.Color(80, 187, 223));
+        pdfButton.setColorClick(new java.awt.Color(0, 156, 210));
+        pdfButton.setColorOver(new java.awt.Color(228, 91, 105));
+        pdfButton.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
+        pdfButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        pdfButton.setIconTextGap(20);
+        pdfButton.setMargin(new java.awt.Insets(2, 18, 3, 14));
+        pdfButton.setRadius(10);
+        pdfButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customButton1ActionPerformed(evt);
+                pdfButtonActionPerformed(evt);
             }
         });
 
-        customButton3.setBackground(new java.awt.Color(228, 91, 105));
-        customButton3.setForeground(new java.awt.Color(51, 51, 51));
-        customButton3.setText("Empleados");
-        customButton3.setColor(new java.awt.Color(228, 91, 105));
-        customButton3.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
-        customButton3.setRadius(10);
+        employeButton.setForeground(new java.awt.Color(51, 51, 51));
+        employeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/users_png_16px.png"))); // NOI18N
+        employeButton.setText("Empleados");
+        employeButton.setBorderColor(new java.awt.Color(80, 187, 223));
+        employeButton.setColor(new java.awt.Color(80, 187, 223));
+        employeButton.setColorClick(new java.awt.Color(0, 156, 210));
+        employeButton.setColorOver(new java.awt.Color(228, 91, 105));
+        employeButton.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
+        employeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        employeButton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        employeButton.setIconTextGap(15);
+        employeButton.setInheritsPopupMenu(true);
+        employeButton.setMargin(new java.awt.Insets(2, 18, 3, 14));
+        employeButton.setRadius(10);
 
-        customButton4.setBackground(new java.awt.Color(228, 91, 105));
-        customButton4.setForeground(new java.awt.Color(51, 51, 51));
-        customButton4.setText("Crear Carta");
-        customButton4.setColor(new java.awt.Color(228, 91, 105));
-        customButton4.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
-        customButton4.setRadius(10);
-        customButton4.addActionListener(new java.awt.event.ActionListener() {
+        newPdfButton.setForeground(new java.awt.Color(51, 51, 51));
+        newPdfButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/adddoc_png_16px.png"))); // NOI18N
+        newPdfButton.setText("Crear Carta");
+        newPdfButton.setBorderColor(new java.awt.Color(80, 187, 223));
+        newPdfButton.setColor(new java.awt.Color(80, 187, 223));
+        newPdfButton.setColorClick(new java.awt.Color(0, 156, 210));
+        newPdfButton.setColorOver(new java.awt.Color(228, 91, 105));
+        newPdfButton.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
+        newPdfButton.setIconTextGap(10);
+        newPdfButton.setRadius(10);
+        newPdfButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customButton4ActionPerformed(evt);
+                newPdfButtonActionPerformed(evt);
             }
         });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/LogoFragua.png"))); // NOI18N
 
-        customButton6.setBackground(new java.awt.Color(228, 91, 105));
-        customButton6.setForeground(new java.awt.Color(51, 51, 51));
-        customButton6.setText("Perfil");
-        customButton6.setColor(new java.awt.Color(228, 91, 105));
-        customButton6.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
-        customButton6.setRadius(10);
-        customButton6.addActionListener(new java.awt.event.ActionListener() {
+        profileButton.setForeground(new java.awt.Color(51, 51, 51));
+        profileButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/user_png_16px.png"))); // NOI18N
+        profileButton.setText("Perfil");
+        profileButton.setBorderColor(new java.awt.Color(80, 187, 223));
+        profileButton.setColor(new java.awt.Color(80, 187, 223));
+        profileButton.setColorClick(new java.awt.Color(0, 156, 210));
+        profileButton.setColorOver(new java.awt.Color(228, 91, 105));
+        profileButton.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
+        profileButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        profileButton.setIconTextGap(20);
+        profileButton.setMargin(new java.awt.Insets(2, 18, 3, 14));
+        profileButton.setRadius(10);
+        profileButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customButton6ActionPerformed(evt);
+                profileButtonActionPerformed(evt);
             }
         });
 
@@ -125,56 +156,75 @@ public class UIMain extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 31, Short.MAX_VALUE)
         );
+
+        customButton1.setBackground(new java.awt.Color(80, 187, 223));
+        customButton1.setForeground(new java.awt.Color(51, 51, 51));
+        customButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/exit_png_16px.png"))); // NOI18N
+        customButton1.setText("Cerrar Sesión");
+        customButton1.setColor(new java.awt.Color(80, 187, 223));
+        customButton1.setColorClick(new java.awt.Color(0, 156, 210));
+        customButton1.setColorOver(new java.awt.Color(228, 91, 105));
+        customButton1.setFont(new java.awt.Font("OCR A Extended", 1, 10)); // NOI18N
+        customButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        customButton1.setIconTextGap(15);
+        customButton1.setRadius(10);
+        customButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
         kGradientPanel1Layout.setHorizontalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(customButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(profileButton, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                        .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(newPdfButton, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                        .addComponent(employeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pdfButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(homeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(customButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(kGradientPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(customButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                        .addComponent(customButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(customButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(customButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(customButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(31, 31, 31)
+                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(pdfButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(employeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(newPdfButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(profileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(customButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(customButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(customButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(customButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
 
-        background.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 760));
+        background.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 700));
 
         kGradientPanel2.setkEndColor(new java.awt.Color(255, 255, 255));
         kGradientPanel2.setkStartColor(new java.awt.Color(255, 255, 255));
@@ -202,7 +252,7 @@ public class UIMain extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -210,17 +260,21 @@ public class UIMain extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void customButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customButton2ActionPerformed
+    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_customButton2ActionPerformed
+    }//GEN-LAST:event_homeButtonActionPerformed
 
-    private void customButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customButton4ActionPerformed
+    private void newPdfButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newPdfButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_customButton4ActionPerformed
+    }//GEN-LAST:event_newPdfButtonActionPerformed
 
-    private void customButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customButton6ActionPerformed
+    private void profileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_customButton6ActionPerformed
+    }//GEN-LAST:event_profileButtonActionPerformed
+
+    private void pdfButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pdfButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pdfButtonActionPerformed
 
     private void customButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customButton1ActionPerformed
         // TODO add your handling code here:
@@ -265,14 +319,15 @@ public class UIMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private com.view.custombutton.CustomButton customButton1;
-    private com.view.custombutton.CustomButton customButton2;
-    private com.view.custombutton.CustomButton customButton3;
-    private com.view.custombutton.CustomButton customButton4;
-    private com.view.custombutton.CustomButton customButton6;
+    private com.view.custombutton.CustomButton employeButton;
+    private com.view.custombutton.CustomButton homeButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private keeptoo.KGradientPanel kGradientPanel1;
     private keeptoo.KGradientPanel kGradientPanel2;
+    private com.view.custombutton.CustomButton newPdfButton;
+    private com.view.custombutton.CustomButton pdfButton;
+    private com.view.custombutton.CustomButton profileButton;
     // End of variables declaration//GEN-END:variables
 }
