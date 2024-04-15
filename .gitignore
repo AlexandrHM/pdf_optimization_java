@@ -1,0 +1,7 @@
+#Carpeta que va a ignorar git
+#build/ Esta carpeta suele ser el directorio de salida 
+#donde se generan los archivos compilados y otros artefactos
+#de construcción. Los archivos en esta carpeta son generados 
+#por el proceso de construcción (compilación, empaquetado, etc.) y 
+#generalmente no se almacenan en el repositorio Git
+build/
