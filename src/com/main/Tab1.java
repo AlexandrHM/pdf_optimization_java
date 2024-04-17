@@ -47,7 +47,7 @@ public class Tab1 extends javax.swing.JPanel {
                 java.lang.String.class, java.lang.Integer.class, java.lang.Short.class, java.lang.Long.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                true, true, true, false, false, true
+                false, false, false, false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -58,13 +58,19 @@ public class Tab1 extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        tableTab1.setSelectionBackground(new java.awt.Color(0, 156, 210));
         jScrollPane1.setViewportView(tableTab1);
         if (tableTab1.getColumnModel().getColumnCount() > 0) {
             tableTab1.getColumnModel().getColumn(0).setResizable(false);
+            tableTab1.getColumnModel().getColumn(1).setResizable(false);
+            tableTab1.getColumnModel().getColumn(1).setPreferredWidth(30);
             tableTab1.getColumnModel().getColumn(2).setResizable(false);
+            tableTab1.getColumnModel().getColumn(2).setPreferredWidth(20);
             tableTab1.getColumnModel().getColumn(3).setResizable(false);
             tableTab1.getColumnModel().getColumn(4).setResizable(false);
+            tableTab1.getColumnModel().getColumn(4).setPreferredWidth(40);
             tableTab1.getColumnModel().getColumn(5).setResizable(false);
+            tableTab1.getColumnModel().getColumn(5).setPreferredWidth(30);
         }
 
         tablepanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 540));
