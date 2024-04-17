@@ -1,9 +1,12 @@
 package com.main;
 
+import com.component.table.TableActionCellRender;
+
 public class Tab1 extends javax.swing.JPanel {
     
     public Tab1() {
         initComponents();
+        tableTab1.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
     }
 
     @SuppressWarnings("unchecked")
@@ -14,7 +17,7 @@ public class Tab1 extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         tablepanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableTab1 = new com.component.table.TableCustom();
         jSeparator1 = new javax.swing.JSeparator();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -28,19 +31,23 @@ public class Tab1 extends javax.swing.JPanel {
         tablepanel.setBackground(new java.awt.Color(255, 255, 204));
         tablepanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableTab1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "ID_Carta", "Revisión", "ID_Empleado", "Fecha Expedición"
+                "Nombre", "ID_Carta", "Revisión", "ID_Empleado", "Fecha Expedición", "Actions"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.Short.class, java.lang.Long.class, java.lang.String.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.Short.class, java.lang.Long.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                true, true, true, false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -51,13 +58,16 @@ public class Tab1 extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(10);
+        jScrollPane1.setViewportView(tableTab1);
+        if (tableTab1.getColumnModel().getColumnCount() > 0) {
+            tableTab1.getColumnModel().getColumn(0).setResizable(false);
+            tableTab1.getColumnModel().getColumn(2).setResizable(false);
+            tableTab1.getColumnModel().getColumn(3).setResizable(false);
+            tableTab1.getColumnModel().getColumn(4).setResizable(false);
+            tableTab1.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        tablepanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 540));
+        tablepanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 540));
 
         javax.swing.GroupLayout basePanelLayout = new javax.swing.GroupLayout(basePanel);
         basePanel.setLayout(basePanelLayout);
@@ -65,19 +75,22 @@ public class Tab1 extends javax.swing.JPanel {
             basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basePanelLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSeparator1)
+                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tablepanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(basePanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tablepanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator1))))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         basePanelLayout.setVerticalGroup(
             basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basePanelLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tablepanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18))
@@ -92,7 +105,7 @@ public class Tab1 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
+    private com.component.table.TableCustom tableTab1;
     private javax.swing.JPanel tablepanel;
     // End of variables declaration//GEN-END:variables
 }
