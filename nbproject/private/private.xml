@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/main/Tab2.java</file>
-            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/main/Tab4.java</file>
-            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/main/Home.java</file>
-            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/main/Tab3.java</file>
+            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/component/table/ActionButtons.java</file>
+            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/component/table/TableActionCellEditor.java</file>
+            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/component/table/TableActionCellRender.java</file>
             <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/main/Tab1.java</file>
-            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/main/Tab5.java</file>
+            <file>file:/D:/Sergio/Documentos/Proyectos/Java/dashboardPDF/src/com/component/table/TableCustom.java</file>
         </group>
     </open-files>
 </project-private>
