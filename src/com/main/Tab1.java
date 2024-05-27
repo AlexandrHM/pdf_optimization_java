@@ -1,5 +1,6 @@
 package com.main;
 
+import com.component.table.TableActionCellEditor;
 import com.component.table.TableActionCellRender;
 
 public class Tab1 extends javax.swing.JPanel {
@@ -7,12 +8,14 @@ public class Tab1 extends javax.swing.JPanel {
     public Tab1() {
         initComponents();
         tableTab1.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
+        tableTab1.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor());
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tableActionCellEditor1 = new com.component.table.TableActionCellEditor();
         basePanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         tablepanel = new javax.swing.JPanel();
@@ -111,6 +114,7 @@ public class Tab1 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private com.component.table.TableActionCellEditor tableActionCellEditor1;
     private com.component.table.TableCustom tableTab1;
     private javax.swing.JPanel tablepanel;
     // End of variables declaration//GEN-END:variables

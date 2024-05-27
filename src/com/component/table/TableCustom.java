@@ -7,7 +7,8 @@ import javax.swing.table.DefaultTableCellRenderer;
 
 public class TableCustom extends JTable {
     public TableCustom(){
-        setShowHorizontalLines(true);
+        setShowHorizontalLines(false);
+        setShowVerticalLines(false);
         setGridColor(new Color(230, 230, 230));
         setRowHeight(40);
         getTableHeader().setReorderingAllowed(false);

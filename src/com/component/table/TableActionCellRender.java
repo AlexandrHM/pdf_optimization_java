@@ -8,15 +8,14 @@ import javax.swing.table.DefaultTableCellRenderer;
 public class TableActionCellRender extends DefaultTableCellRenderer {
 
     @Override
-    public Component getTableCellRendererComponent(JTable table, Object value, boolean isSeleted, boolean hasFocus, int row, int column) {
-        Component com = super.getTableCellRendererComponent(table, value, isSeleted, hasFocus, row, column);
+    public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+        Component com = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
         PanelSDD action = new PanelSDD();
-        if (isSeleted == false && row % 2 == 0) {
+        if(isSelected == false && row % 2 == 0) {
             action.setBackground(Color.WHITE);
         } else {
             action.setBackground(com.getBackground());
         }
         return action;
-    }
-    
+    }   
 }
