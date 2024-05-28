@@ -12,7 +12,7 @@ public class TableActionCellRender extends DefaultTableCellRenderer {
         Component com = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
         PanelSDD action = new PanelSDD();
         if(isSelected == false && row % 2 == 0) {
-            action.setBackground(Color.WHITE);
+            action.setBackground(new Color(230, 230, 230));
         } else {
             action.setBackground(com.getBackground());
         }

@@ -1,14 +1,51 @@
 package com.main;
 
+import com.component.table.PanelSDD;
 import com.component.table.TableActionCellEditor;
 import com.component.table.TableActionCellRender;
+import com.component.table.TableCustom;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.table.DefaultTableModel;
 
 public class Tab1 extends javax.swing.JPanel {
     
     public Tab1() {
         initComponents();
-        tableTab1.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
-        tableTab1.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor());
+      String[] columnNames = {"Nombre", "ID_Carta", "Revision", "ID_Empleado", "Fecha de expedición"};
+            Object[][] data = {
+                {"Juan Perez", 1001, "Rev1", 501, "2023-01-15"},
+                {"Maria Gomez", 1002, "Rev2", 502, "2023-02-10"},
+                {"Carlos Ruiz", 1003, "Rev3", 503, "2023-03-05"},
+                {"Ana Lopez", 1004, "Rev1", 504, "2023-04-20"},
+                {"Luis Martinez", 1005, "Rev2", 505, "2023-05-11"},
+                {"Laura Fernández", 1006, "Rev3", 506, "2023-06-13"},
+                {"Pedro Sánchez", 1007, "Rev1", 507, "2023-07-22"},
+                {"Marta Díaz", 1008, "Rev2", 508, "2023-08-30"},
+                {"David Torres", 1009, "Rev3", 509, "2023-09-18"},
+                {"Sofía García", 1010, "Rev1", 510, "2023-10-29"}
+            };
+            DefaultTableModel model = new DefaultTableModel(data, columnNames);
+
+           tableTab1.setModel(model);
+            
+           
+      
+        
+        
+        
+        
+       
+       
+       
+       PanelSDD panelSDD = new PanelSDD();
+       JPanelButtons.add(panelSDD, BorderLayout.CENTER);
+       JPanelButtons.setBackground(Color.WHITE);
+       JPanelButtons.revalidate();
+       JPanelButtons.repaint();
+       
+           
+  
     }
 
     @SuppressWarnings("unchecked")
@@ -22,6 +59,7 @@ public class Tab1 extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tableTab1 = new com.component.table.TableCustom();
         jSeparator1 = new javax.swing.JSeparator();
+        JPanelButtons = new javax.swing.JPanel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -61,6 +99,7 @@ public class Tab1 extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        tableTab1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tableTab1.setSelectionBackground(new java.awt.Color(0, 156, 210));
         jScrollPane1.setViewportView(tableTab1);
         if (tableTab1.getColumnModel().getColumnCount() > 0) {
@@ -76,7 +115,10 @@ public class Tab1 extends javax.swing.JPanel {
             tableTab1.getColumnModel().getColumn(5).setPreferredWidth(30);
         }
 
-        tablepanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 540));
+        tablepanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 540));
+
+        JPanelButtons.setForeground(new java.awt.Color(255, 255, 255));
+        JPanelButtons.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout basePanelLayout = new javax.swing.GroupLayout(basePanel);
         basePanel.setLayout(basePanelLayout);
@@ -90,26 +132,34 @@ public class Tab1 extends javax.swing.JPanel {
                         .addGap(6, 6, 6)
                         .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(tablepanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jSeparator1))))
-                .addContainerGap(80, Short.MAX_VALUE))
+                            .addGroup(basePanelLayout.createSequentialGroup()
+                                .addComponent(jSeparator1)
+                                .addGap(278, 278, 278)
+                                .addComponent(JPanelButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         basePanelLayout.setVerticalGroup(
             basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basePanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1)
+                .addContainerGap()
+                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addGroup(basePanelLayout.createSequentialGroup()
+                        .addComponent(JPanelButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(tablepanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18))
         );
 
-        add(basePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 630));
+        add(basePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 630));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel JPanelButtons;
     private javax.swing.JPanel basePanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
