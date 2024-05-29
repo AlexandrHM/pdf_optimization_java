@@ -52,6 +52,9 @@ public class PanelSDD extends javax.swing.JPanel {
         visualizeIcon.setMinimumSize(new java.awt.Dimension(24, 24));
         visualizeIcon.setPreferredSize(new java.awt.Dimension(24, 24));
         visualizeIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                visualizeIconMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 visualizeIconMouseEntered(evt);
             }
@@ -69,17 +72,28 @@ public class PanelSDD extends javax.swing.JPanel {
         downIcon.setMinimumSize(new java.awt.Dimension(25, 25));
         downIcon.setPreferredSize(new java.awt.Dimension(25, 25));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Visualizar");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("PDF");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Descargar");
 
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("PDF");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Eliminar");
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("PDF");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -144,6 +158,10 @@ public class PanelSDD extends javax.swing.JPanel {
     private void visualizeIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_visualizeIconMouseEntered
+
+    private void visualizeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_visualizeIconMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
