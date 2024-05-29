@@ -61,7 +61,7 @@ public class Tab1 extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         JPanelButtons = new javax.swing.JPanel();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new java.awt.GridLayout());
 
         basePanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -136,7 +136,7 @@ public class Tab1 extends javax.swing.JPanel {
                                 .addComponent(jSeparator1)
                                 .addGap(278, 278, 278)
                                 .addComponent(JPanelButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         basePanelLayout.setVerticalGroup(
             basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +154,7 @@ public class Tab1 extends javax.swing.JPanel {
                 .addGap(18, 18, 18))
         );
 
-        add(basePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 630));
+        add(basePanel);
     }// </editor-fold>//GEN-END:initComponents
 
 

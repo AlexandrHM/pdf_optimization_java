@@ -35,13 +35,18 @@ public class Home extends javax.swing.JFrame {
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMinimumSize(new java.awt.Dimension(1500, 900));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
+        getContentPane().setLayout(null);
 
+        BGPanel.setMinimumSize(new java.awt.Dimension(1500, 900));
+        BGPanel.setPreferredSize(new java.awt.Dimension(1500, 900));
         BGPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         SlideDown.setkEndColor(new java.awt.Color(255, 255, 255));
         SlideDown.setkStartColor(new java.awt.Color(255, 255, 255));
         SlideDown.setkTransparentControls(false);
+        SlideDown.setPreferredSize(new java.awt.Dimension(1500, 20));
 
         javax.swing.GroupLayout SlideDownLayout = new javax.swing.GroupLayout(SlideDown);
         SlideDown.setLayout(SlideDownLayout);
@@ -60,6 +65,7 @@ public class Home extends javax.swing.JFrame {
         SlideOpc.setkEndColor(new java.awt.Color(80, 187, 223));
         SlideOpc.setkGradientFocus(400);
         SlideOpc.setkStartColor(new java.awt.Color(80, 187, 223));
+        SlideOpc.setMinimumSize(new java.awt.Dimension(1500, 900));
         SlideOpc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LogoHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/src/Logo.png"))); // NOI18N
@@ -247,7 +253,8 @@ public class Home extends javax.swing.JFrame {
 
         BGPanel.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1130, 630));
 
-        getContentPane().add(BGPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 700));
+        getContentPane().add(BGPanel);
+        BGPanel.setBounds(0, 0, 1500, 900);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
