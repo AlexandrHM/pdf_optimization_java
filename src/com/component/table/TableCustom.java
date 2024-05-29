@@ -7,10 +7,11 @@ import javax.swing.table.DefaultTableCellRenderer;
 
 public class TableCustom extends JTable {
     public TableCustom(){
-        setShowHorizontalLines(false);
-        setShowVerticalLines(false);
+        setShowHorizontalLines(true);
+        setShowVerticalLines(true);
         setGridColor(new Color(230, 230, 230));
         setRowHeight(40);
         getTableHeader().setReorderingAllowed(false);
+        
     }
 }
