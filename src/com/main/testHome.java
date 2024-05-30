@@ -10,6 +10,7 @@ import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighte
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Image;
+import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 
@@ -43,6 +44,13 @@ public class testHome extends javax.swing.JFrame {
          // Actualizar el layout de JPanelTabs
          JPanelTabs.revalidate();
          JPanelTabs.repaint();
+         
+         URL iconURL = getClass().getResource("/com/src/iconDefault.png");
+        // iconURL is null when not found
+        ImageIcon icon = new ImageIcon(iconURL);
+        this.setIconImage(icon.getImage());
+         
+         
         
     }
 

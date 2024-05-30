@@ -1,12 +1,16 @@
 package com.component.table;
 
+import FunctionalityClasses.MethodsPdf;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 
 /*JPanel de los iconos de delete, see and download*/
+
 public class PanelSDD extends javax.swing.JPanel {
+    
+    
     
     public PanelSDD() {
         initComponents();
@@ -18,7 +22,20 @@ public class PanelSDD extends javax.swing.JPanel {
         downIcon.setToolTipText("Descargar pdf");
         deleteIcon.setToolTipText("Eliminar pdf");
         
+        downIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+            downIconMouseClicked(evt);
+        }
+});
+        
+        
+        
+        
     }
+    
+    
+    //Variables globales
+    MethodsPdf methodsPdf = new MethodsPdf();
     
     private ImageIcon loadAndScaleIcon(String path, int width, int height) {
         ImageIcon originalIcon = new ImageIcon(getClass().getResource(path));
@@ -71,6 +88,11 @@ public class PanelSDD extends javax.swing.JPanel {
         downIcon.setMaximumSize(new java.awt.Dimension(25, 25));
         downIcon.setMinimumSize(new java.awt.Dimension(25, 25));
         downIcon.setPreferredSize(new java.awt.Dimension(25, 25));
+        downIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                downIconMouseClicked(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -157,11 +179,33 @@ public class PanelSDD extends javax.swing.JPanel {
 
     private void visualizeIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseEntered
         // TODO add your handling code here:
+        System.out.println("Estás haciendo click en download");
     }//GEN-LAST:event_visualizeIconMouseEntered
 
     private void visualizeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseClicked
         // TODO add your handling code here:
+        methodsPdf.openWhitExplorer("C:/Users/desan/OneDrive/Documentos/CartaDatos.pdf");
+        
+        
     }//GEN-LAST:event_visualizeIconMouseClicked
+
+    private void downIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_downIconMouseClicked
+        // TODO add your handling code here:
+        System.out.println("Estàs haciendo click en down icon");
+        MethodsPdf editor = new MethodsPdf(
+                "correo@example.com",
+                "Juan Perez",
+                "12345",
+                "IT",
+                "Laptop",
+                "Dell XPS 15",
+                "Sí",
+                "ABC123456",
+                "ETQ123"
+        );
+
+        editor.fillPdfForm();
+    }//GEN-LAST:event_downIconMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
