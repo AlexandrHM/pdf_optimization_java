@@ -5,6 +5,12 @@
 package com.main;
 
 import com.component.table.PanelSDD;
+<<<<<<< HEAD
+=======
+import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialDarkerIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialOceanicIJTheme;
+>>>>>>> aa30dab4db5faedd6dfef2f55fbd2170a9420b42
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import java.awt.BorderLayout;
 import java.awt.Color;

@@ -184,6 +184,7 @@ public class PanelSDD extends javax.swing.JPanel {
 
     private void visualizeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseClicked
         // TODO add your handling code here:
+<<<<<<< HEAD
         methodsPdf.openWhitExplorer("C:/Users/desan/OneDrive/Documentos/CartaDatos.pdf");
         
         
@@ -207,6 +208,10 @@ public class PanelSDD extends javax.swing.JPanel {
         editor.fillPdfForm();
     }//GEN-LAST:event_downIconMouseClicked
 
+=======
+    }//GEN-LAST:event_visualizeIconMouseClicked
+
+>>>>>>> aa30dab4db5faedd6dfef2f55fbd2170a9420b42
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel deleteIcon;
