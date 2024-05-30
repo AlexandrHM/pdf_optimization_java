@@ -1,8 +1,10 @@
 package com.main;
 
+import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import java.awt.BorderLayout;
 import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 public class Home extends javax.swing.JFrame {
@@ -349,10 +351,19 @@ public class Home extends javax.swing.JFrame {
     }
     
     public static void main(String args[]) {
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
+            /* Create and display the form */
+            java.awt.EventQueue.invokeLater(() -> {
+                //Establece el tema
+            try {
+                UIManager.setLookAndFeel(new FlatMacLightLaf());
+            } catch (Exception ex) {
+                System.err.println("Failed to initialize LaF");
+            }
+            
             new Home().setVisible(true);
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
