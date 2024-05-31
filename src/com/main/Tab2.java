@@ -22,7 +22,7 @@ public class Tab2 extends javax.swing.JPanel {
 
         Tickets = new javax.swing.JPanel();
         jlabeltitle_tab2 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
+        jSeparatorTab2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableTab2 = new com.customTable.TableCustom();
 
@@ -38,23 +38,31 @@ public class Tab2 extends javax.swing.JPanel {
         jlabeltitle_tab2.setText(" Reportes de cartas responsivas con incidencias ");
         Tickets.add(jlabeltitle_tab2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 730, 30));
 
-        jSeparator1.setBackground(new java.awt.Color(51, 51, 51));
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setPreferredSize(new java.awt.Dimension(0, 3));
-        Tickets.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1000, 10));
+        jSeparatorTab2.setBackground(new java.awt.Color(51, 51, 51));
+        jSeparatorTab2.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparatorTab2.setPreferredSize(new java.awt.Dimension(0, 3));
+        Tickets.add(jSeparatorTab2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1000, 10));
 
         tableTab2.setForeground(new java.awt.Color(51, 51, 51));
         tableTab2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID Carta", "Nombre", "Revision", "ID Admin", "ID Empleado", "Fecha incidente"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tableTab2.setGridColor(new java.awt.Color(90, 94, 96));
         tableTab2.setMinimumSize(new java.awt.Dimension(75, 300));
         tableTab2.setSelectionBackground(new java.awt.Color(80, 187, 223));
@@ -72,7 +80,7 @@ public class Tab2 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Tickets;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparatorTab2;
     private javax.swing.JLabel jlabeltitle_tab2;
     private com.customTable.TableCustom tableTab2;
     // End of variables declaration//GEN-END:variables
