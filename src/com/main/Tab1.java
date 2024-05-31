@@ -70,13 +70,11 @@ public class Tab1 extends javax.swing.JPanel {
         tableCustom1.setSelectionBackground(new java.awt.Color(80, 187, 223));
         tableCustom1.setSelectionForeground(new java.awt.Color(255, 255, 255));
         tableCustom1.setShowGrid(false);
-        tableCustom1.setShowHorizontalLines(false);
+        tableCustom1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tableCustom1);
         if (tableCustom1.getColumnModel().getColumnCount() > 0) {
-            tableCustom1.getColumnModel().getColumn(0).setResizable(false);
-            tableCustom1.getColumnModel().getColumn(1).setResizable(false);
-            tableCustom1.getColumnModel().getColumn(2).setResizable(false);
             tableCustom1.getColumnModel().getColumn(3).setResizable(false);
+            tableCustom1.getColumnModel().getColumn(4).setResizable(false);
         }
 
         javax.swing.GroupLayout basePanelTab1Layout = new javax.swing.GroupLayout(basePanelTab1);
