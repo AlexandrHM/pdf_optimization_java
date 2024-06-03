@@ -10,10 +10,7 @@ import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighte
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Image;
-<<<<<<< HEAD
 import java.net.URL;
-=======
->>>>>>> aa30dab4db5faedd6dfef2f55fbd2170a9420b42
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 
@@ -47,19 +44,24 @@ public class testHome extends javax.swing.JFrame {
          // Actualizar el layout de JPanelTabs
          JPanelTabs.revalidate();
          JPanelTabs.repaint();
-<<<<<<< HEAD
          
+         
+         //Pone logo al JFRAME
          URL iconURL = getClass().getResource("/com/src/iconDefault.png");
         // iconURL is null when not found
         ImageIcon icon = new ImageIcon(iconURL);
         this.setIconImage(icon.getImage());
+        
+        
          
+        
          
-=======
->>>>>>> aa30dab4db5faedd6dfef2f55fbd2170a9420b42
         
     }
-
+    
+    
+    
+    //Cargar y escalar ícono 
      private ImageIcon loadAndScaleIcon(String path, int width, int height) {
         ImageIcon originalIcon = new ImageIcon(getClass().getResource(path));
         if (originalIcon.getIconWidth() == -1) {

@@ -1,5 +1,6 @@
 package com.component.table;
 
+import FunctionalityClasses.ApiClient;
 import FunctionalityClasses.MethodsPdf;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -9,9 +10,6 @@ import javax.swing.ImageIcon;
 /*JPanel de los iconos de delete, see and download*/
 
 public class PanelSDD extends javax.swing.JPanel {
-    
-    
-    
     public PanelSDD() {
         initComponents();
         deleteIcon.setIcon(loadAndScaleIcon("/com/src/delete_icon.png", 25, 25));
@@ -26,11 +24,7 @@ public class PanelSDD extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
             downIconMouseClicked(evt);
         }
-});
-        
-        
-        
-        
+});       
     }
     
     
@@ -180,11 +174,11 @@ public class PanelSDD extends javax.swing.JPanel {
     private void visualizeIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseEntered
         // TODO add your handling code here:
         System.out.println("Estás haciendo click en download");
+        
     }//GEN-LAST:event_visualizeIconMouseEntered
 
     private void visualizeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseClicked
         // TODO add your handling code here:
-<<<<<<< HEAD
         methodsPdf.openWhitExplorer("C:/Users/desan/OneDrive/Documentos/CartaDatos.pdf");
         
         
@@ -194,24 +188,22 @@ public class PanelSDD extends javax.swing.JPanel {
         // TODO add your handling code here:
         System.out.println("Estàs haciendo click en down icon");
         MethodsPdf editor = new MethodsPdf(
-                "correo@example.com",
-                "Juan Perez",
-                "12345",
+                "carlosmxm055@example.com",
+                "Carlos Perez",
+                "12345678",
                 "IT",
                 "Laptop",
-                "Dell XPS 15",
+                "Dell  1535",
                 "Sí",
                 "ABC123456",
                 "ETQ123"
         );
+         
 
         editor.fillPdfForm();
+        
     }//GEN-LAST:event_downIconMouseClicked
 
-=======
-    }//GEN-LAST:event_visualizeIconMouseClicked
-
->>>>>>> aa30dab4db5faedd6dfef2f55fbd2170a9420b42
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel deleteIcon;

@@ -7,20 +7,14 @@ package FunctionalityClasses;
 
 
 import com.itextpdf.text.pdf.AcroFields;
-import com.itextpdf.text.pdf.AcroFields.Item;
 import com.itextpdf.text.pdf.PdfDictionary;
 import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
-import com.itextpdf.text.pdf.PdfString;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -54,8 +48,14 @@ public class MethodsPdf {
     public MethodsPdf(){}
     
     
+    
+    //llenar el pdf con parámetros
      public void fillPdfForm() {
+         
+         //PDF base vacío para hacer edición
          String inputFilePath = "C:/Users/desan/OneDrive/Documentos/CartaDatos.pdf";
+         
+         //PDF modificado y añadido el numero de empleado
         String outputFilePath = "C:/Users/desan/OneDrive/Documentos/CartaResponsivaRellenada"+numeroEmpleado+".pdf";
 
         File inputFile = new File(inputFilePath);
@@ -73,15 +73,15 @@ public class MethodsPdf {
             AcroFields fields = stamper.getAcroFields();
             
             // Rellenar los campos
-            fields.setField("Correo", correo);
-            fields.setField("NombreEmpleado", nombre);
-            fields.setField("NumeroEmpleado", numeroEmpleado);
-            fields.setField("Departamento", departamento);
-            fields.setField("DescEquipo", descEquipo);
-            fields.setField("ModeloEquipo", modeloEquipo);
-            fields.setField("ActivoEquipo", activoEquipo);
-            fields.setField("NumeroSerie", numeroSerie);
-            fields.setField("EtiquetaEquipo", etiquetaEquipo);
+            fields.setField("Correo", correo); //empleado
+            fields.setField("NombreEmpleado", nombre);  //empleado
+            fields.setField("NumeroEmpleado", numeroEmpleado); //empleado
+            fields.setField("Departamento", departamento); //empleado
+            fields.setField("DescEquipo", descEquipo); //Dispositivos
+            fields.setField("ModeloEquipo", modeloEquipo); //Dispositivos
+            fields.setField("ActivoEquipo", activoEquipo); // Dispositivos
+            fields.setField("NumeroSerie", numeroSerie); //Dispositivos
+            fields.setField("EtiquetaEquipo", etiquetaEquipo); // Dispositivos
 
             // Eliminar los rectángulos alrededor del texto
             Map<String, AcroFields.Item> fieldsMap = fields.getFields();
@@ -137,9 +137,5 @@ public class MethodsPdf {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-    
-    
-}
+    }
 }

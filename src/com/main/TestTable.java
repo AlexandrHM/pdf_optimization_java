@@ -4,16 +4,13 @@
  */
 package com.main;
 
+import ClassesOfDtos.Tab1Data;
+import FunctionalityClasses.ApiClient;
 import com.component.table.PanelSDD;
-<<<<<<< HEAD
-=======
-import com.formdev.flatlaf.FlatLightLaf;
-import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialDarkerIJTheme;
-import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialOceanicIJTheme;
->>>>>>> aa30dab4db5faedd6dfef2f55fbd2170a9420b42
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.util.List;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 
@@ -29,40 +26,28 @@ public class TestTable extends javax.swing.JPanel {
     public TestTable() {
         initComponents();
 
-        DefaultTableModel model = new DefaultTableModel(
-                new Object[][]{
-                    {"E001", "Juan Pérez", "C1234", "R01", "2022-03-15"},
-                    {"E002", "María Rodríguez", "C5678", "R02", "2023-01-10"},
-                    {"E003", "Carlos Gómez", "C9012", "R03", "2021-07-22"},
-                    {"E004", "Ana Martínez", "C3456", "R04", "2022-11-05"},
-                    {"E005", "Pedro Sánchez", "C7890", "R05", "2023-04-28"},
-                    {"E006", "Laura Torres", "C2345", "R06", "2022-09-18"},
-                    {"E007", "Javier Ramírez", "C6789", "R07", "2021-12-31"},
-                    {"E008", "Sofía Flores", "C0123", "R08", "2023-02-14"},
-                    {"E009", "David Hernández", "C4567", "R09", "2022-06-08"},
-                    {"E010", "Marta García", "C8901", "R10", "2021-10-25"},
-                    {"E011", "Alejandro López", "C2345", "R11", "2023-03-01"},
-                    {"E012", "Gabriela Jiménez", "C6789", "R12", "2022-08-12"},
-                    {"E013", "Miguel Díaz", "C0123", "R13", "2021-05-19"},
-                    {"E014", "Lucía Morales", "C4567", "R14", "2022-12-27"},
-                    {"E015", "Andrés Gutiérrez", "C8901", "R15", "2023-04-03"},
-                    {"E016", "Isabel Álvarez", "C2345", "R16", "2022-07-09"},
-                    {"E017", "Sergio Fernández", "C6789", "R17", "2021-11-23"},
-                    {"E018", "Valentina Muñoz", "C0123", "R18", "2023-01-06"},
-                    {"E019", "Diego Rojas", "C4567", "R19", "2022-10-31"},
-                    {"E020", "Camila Castillo", "C8901", "R20", "2021-09-16"}, // Otros datos...
-                },
-                new String[]{
-                    "ID_Empleado",
-                     "Nombre", "ID_Carta", "Revisión", "Fecha de expedición"
-                }
-        ) {
-            @Override
-            public boolean isCellEditable(int row, int column
-            ) {
-                return false; // Todas las celdas no son editables
+        ApiClient apiClient = new ApiClient();
+        String url = "http://localhost:8080/api/v1/empleados/home"; // Reemplaza con tu URL
+        List<Tab1Data> empleados = apiClient.makeGetRequestForTab1(url);
+
+        // Crear JTable y DefaultTableModel
+        String[] columnNames = {"Numero Empleado", "Nombre Emp", "ID Carta", "Revision", "Fecha Entrega"};
+        DefaultTableModel model = new DefaultTableModel(columnNames, 0);
+        
+
+        // Llenar el modelo con datos
+        if (empleados != null) {
+            for (Tab1Data emp : empleados) {
+                Object[] row = {
+                        emp.getNumeroEmpleado(),
+                        emp.getNombreEmp(),
+                        emp.getIdCarta(),
+                        emp.getRevision(),
+                        emp.getFechaEntrega()
+                };
+                model.addRow(row);
             }
-        };
+        }
 
         tableHome.setModel(model);
 
