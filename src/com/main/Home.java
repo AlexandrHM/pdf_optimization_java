@@ -43,8 +43,8 @@ public class Home extends javax.swing.JFrame {
 
         SlideDown.setBackground(new java.awt.Color(255, 255, 255));
         SlideDown.setForeground(new java.awt.Color(255, 255, 255));
-        SlideDown.setkEndColor(new java.awt.Color(80, 187, 223));
-        SlideDown.setkStartColor(new java.awt.Color(80, 187, 223));
+        SlideDown.setkEndColor(new java.awt.Color(255, 255, 255));
+        SlideDown.setkStartColor(new java.awt.Color(255, 255, 255));
         SlideDown.setkTransparentControls(false);
 
         javax.swing.GroupLayout SlideDownLayout = new javax.swing.GroupLayout(SlideDown);
@@ -232,9 +232,9 @@ public class Home extends javax.swing.JFrame {
 
         SlideTop.setBackground(new java.awt.Color(255, 255, 255));
         SlideTop.setForeground(new java.awt.Color(255, 255, 255));
-        SlideTop.setkEndColor(new java.awt.Color(80, 187, 223));
+        SlideTop.setkEndColor(new java.awt.Color(255, 255, 255));
         SlideTop.setkGradientFocus(900);
-        SlideTop.setkStartColor(new java.awt.Color(80, 187, 223));
+        SlideTop.setkStartColor(new java.awt.Color(255, 255, 255));
         SlideTop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         BGPanel.add(SlideTop, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 1130, 30));
 
