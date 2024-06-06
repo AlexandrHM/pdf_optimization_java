@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.functionalityClasses;
 
 import com.itextpdf.text.pdf.AcroFields;
@@ -47,9 +43,9 @@ public class MethodsPdf {
     //llenar el pdf con parámetros
     public void fillPdfForm() {
         //PDF base vacío para hacer edición
-        String inputFilePath = "C:/Users/desan/OneDrive/Documentos/CartaDatos.pdf";
+        String inputFilePath = "C:/Users/sergi/OneDrive/Escritorio/CartasResponsivas/CartaTemplate.pdf";
         //PDF modificado y añadido el numero de empleado
-        String outputFilePath = "C:/Users/desan/OneDrive/Documentos/CartaResponsivaRellenada" + numeroEmpleado + ".pdf";
+        String outputFilePath = "C:/Users/sergi/OneDrive/Escritorio/CartasResponsivas/CartaModificado" + numeroEmpleado + ".pdf";
         File inputFile = new File(inputFilePath);
         if (!inputFile.exists()) {
             System.out.println("El archivo de entrada no se encuentra en la ruta especificada: " + inputFilePath);
