@@ -25,7 +25,7 @@ public class Tab1 extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jlabeltitle_tab1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableCustom1 = new com.customTable.TableCustom();
+        tableTab1 = new com.customTable.TableCustom();
         panelSDD1 = new com.customTable.PanelSDD();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -40,8 +40,8 @@ public class Tab1 extends javax.swing.JPanel {
         jlabeltitle_tab1.setForeground(new java.awt.Color(51, 51, 51));
         jlabeltitle_tab1.setText("Lista de PDF's de cartas responsivas ");
 
-        tableCustom1.setForeground(new java.awt.Color(51, 51, 51));
-        tableCustom1.setModel(new javax.swing.table.DefaultTableModel(
+        tableTab1.setForeground(new java.awt.Color(51, 51, 51));
+        tableTab1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -73,16 +73,16 @@ public class Tab1 extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tableCustom1.setGridColor(new java.awt.Color(90, 94, 96));
-        tableCustom1.setRowHeight(30);
-        tableCustom1.setSelectionBackground(new java.awt.Color(80, 187, 223));
-        tableCustom1.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        tableCustom1.setShowGrid(false);
-        tableCustom1.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(tableCustom1);
-        if (tableCustom1.getColumnModel().getColumnCount() > 0) {
-            tableCustom1.getColumnModel().getColumn(3).setResizable(false);
-            tableCustom1.getColumnModel().getColumn(4).setResizable(false);
+        tableTab1.setGridColor(new java.awt.Color(90, 94, 96));
+        tableTab1.setRowHeight(30);
+        tableTab1.setSelectionBackground(new java.awt.Color(80, 187, 223));
+        tableTab1.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        tableTab1.setShowGrid(false);
+        tableTab1.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tableTab1);
+        if (tableTab1.getColumnModel().getColumnCount() > 0) {
+            tableTab1.getColumnModel().getColumn(3).setResizable(false);
+            tableTab1.getColumnModel().getColumn(4).setResizable(false);
         }
 
         javax.swing.GroupLayout basePanelTab1Layout = new javax.swing.GroupLayout(basePanelTab1);
@@ -124,6 +124,6 @@ public class Tab1 extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel jlabeltitle_tab1;
     private com.customTable.PanelSDD panelSDD1;
-    private com.customTable.TableCustom tableCustom1;
+    private com.customTable.TableCustom tableTab1;
     // End of variables declaration//GEN-END:variables
 }
