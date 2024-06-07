@@ -52,6 +52,9 @@
     <Component class="javax.swing.JLabel" name="downIcon">
     </Component>
     <Component class="javax.swing.JLabel" name="visualizeIcon">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="visualizeIconMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

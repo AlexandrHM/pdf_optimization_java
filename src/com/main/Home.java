@@ -41,6 +41,8 @@ public class Home extends javax.swing.JFrame {
 
         BGPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        SlideDown.setBackground(new java.awt.Color(255, 255, 255));
+        SlideDown.setForeground(new java.awt.Color(255, 255, 255));
         SlideDown.setkEndColor(new java.awt.Color(255, 255, 255));
         SlideDown.setkStartColor(new java.awt.Color(255, 255, 255));
         SlideDown.setkTransparentControls(false);
@@ -228,13 +230,15 @@ public class Home extends javax.swing.JFrame {
 
         BGPanel.add(SlideOpc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 700));
 
+        SlideTop.setBackground(new java.awt.Color(255, 255, 255));
+        SlideTop.setForeground(new java.awt.Color(255, 255, 255));
         SlideTop.setkEndColor(new java.awt.Color(255, 255, 255));
         SlideTop.setkGradientFocus(900);
         SlideTop.setkStartColor(new java.awt.Color(255, 255, 255));
         SlideTop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        BGPanel.add(SlideTop, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 1130, 50));
+        BGPanel.add(SlideTop, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 1130, 30));
 
-        content.setBackground(new java.awt.Color(253, 253, 253));
+        content.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
@@ -244,10 +248,10 @@ public class Home extends javax.swing.JFrame {
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
-        BGPanel.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1130, 630));
+        BGPanel.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 1130, 650));
 
         getContentPane().add(BGPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 700));
 

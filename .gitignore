@@ -5,4 +5,6 @@
 #por el proceso de construcción (compilación, empaquetado, etc.) y 
 #generalmente no se almacenan en el repositorio Git
 build/
+nbproject/private/
 /dist/
+

@@ -1,5 +1,6 @@
 package com.customTable;
 
+import com.functionalityClasses.MethodsPdf;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -18,6 +19,9 @@ public class PanelSDD extends javax.swing.JPanel {
         downIcon.setToolTipText("Descargar pdf");
         deleteIcon.setToolTipText("Eliminar pdf");
     }
+    
+    //Variables globales
+    MethodsPdf methodsPdf = new MethodsPdf();
     
     private ImageIcon loadAndScaleIcon(String path, int width, int height) {
         ImageIcon originalIcon = new ImageIcon(getClass().getResource(path));
@@ -38,6 +42,12 @@ public class PanelSDD extends javax.swing.JPanel {
         visualizeIcon = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+
+        visualizeIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                visualizeIconMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -63,6 +73,11 @@ public class PanelSDD extends javax.swing.JPanel {
                 .addGap(11, 11, 11))
         );
     }// </editor-fold>//GEN-END:initComponents
+    //Evento para visualizar PDF
+    private void visualizeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visualizeIconMouseClicked
+        // TODO add your handling code here:
+        methodsPdf.openWhitExplorer("C:/Users/sergi/OneDrive/Escritorio/CartasResponsivas/CartaTemplate.pdf");
+    }//GEN-LAST:event_visualizeIconMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel deleteIcon;
