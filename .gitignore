@@ -6,3 +6,5 @@
 #generalmente no se almacenan en el repositorio Git
 build/
 nbproject/private/
+/dist/
+

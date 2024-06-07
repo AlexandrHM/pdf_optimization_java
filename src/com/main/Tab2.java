@@ -25,13 +25,11 @@ public class Tab2 extends javax.swing.JPanel {
         jSeparatorTab2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableTab2 = new com.customTable.TableCustom();
-
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Tickets.setBackground(new java.awt.Color(255, 255, 255));
         Tickets.setForeground(new java.awt.Color(255, 255, 255));
         Tickets.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jlabeltitle_tab2.setBackground(new java.awt.Color(51, 51, 51));
         jlabeltitle_tab2.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
         jlabeltitle_tab2.setForeground(new java.awt.Color(51, 51, 51));
